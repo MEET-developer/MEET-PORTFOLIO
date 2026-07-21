@@ -409,13 +409,46 @@ header{
 .logo img:hover{
     transform:scale(1.05);
 }
+.menu-btn{
+    display:none;
+    background:none;
+    border:none;
+    color:#fff;
+    font-size:28px;
+    cursor:pointer;
+}
+
+.menu-btn{
+    display:block;
+}
+
+.btn-nav{
+    display:none;
+}
 
 .nav-links{
 
+    position:absolute;
+    top:95px;
+    left:0;
+    width:100%;
+
+    background:#111;
+
     display:flex;
+    flex-direction:column;
+    align-items:center;
 
-    gap:42px;
+    gap:25px;
 
+    padding:30px 0;
+
+    transform:translateY(-150%);
+    transition:.4s;
+}
+
+.nav-links.open{
+    transform:translateY(0);
 }
 
 .nav-links a{
