@@ -8,7 +8,7 @@ Designed with a clean UI, smooth animations, and an immersive user experience.
 
 ## 🌐 Live Demo
 
-🔗 Coming Soon
+🔗 https://meet-developer.github.io/MEET-PORTFOLIO/
 
 ---
 
