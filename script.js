@@ -610,7 +610,6 @@ console.log(
 // Your existing JavaScript...
 
 
-// Mobile Navbar
 const menuBtn = document.querySelector(".menu-btn");
 const navLinks = document.querySelector(".nav-links");
 
