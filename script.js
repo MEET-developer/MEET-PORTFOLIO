@@ -11,10 +11,15 @@ window.addEventListener("load", () => {
 
     const loader = document.getElementById("loader");
 
-    setTimeout(() => {
+    if (!loader) return;
 
+    setTimeout(() => {
         loader.style.opacity = "0";
         loader.style.visibility = "hidden";
+
+        setTimeout(() => {
+            loader.remove();
+        }, 600);
 
     }, 1800);
 
@@ -607,12 +612,3 @@ console.log(
 ========================================== */
 
 
-// Your existing JavaScript...
-
-
-const menuBtn = document.querySelector(".menu-btn");
-const navLinks = document.querySelector(".nav-links");
-
-menuBtn.addEventListener("click", () => {
-    navLinks.classList.toggle("open");
-});
