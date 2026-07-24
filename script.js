@@ -14,6 +14,7 @@ window.addEventListener("load", () => {
     if (!loader) return;
 
     setTimeout(() => {
+
         loader.style.opacity = "0";
         loader.style.visibility = "hidden";
 
