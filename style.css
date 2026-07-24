@@ -419,32 +419,22 @@ header{
 }
 
 .menu-btn{
-    display:block;
-}
-
-.btn-nav{
     display:none;
+    background:none;
+    border:none;
+    color:#fff;
+    font-size:28px;
+    cursor:pointer;
 }
 
 .nav-links{
-
-    position:absolute;
-    top:95px;
-    left:0;
-    width:100%;
-
-    background:#111;
-
     display:flex;
-    flex-direction:column;
     align-items:center;
+    gap:42px;
+}
 
-    gap:25px;
-
-    padding:30px 0;
-
-    transform:translateY(-150%);
-    transition:.4s;
+.btn-nav{
+    display:inline-flex;
 }
 
 .nav-links.open{
@@ -3502,7 +3492,31 @@ grid-template-columns:1fr;
 ===================================================== */
 
 @media (max-width:768px){
+.menu-btn{
+    display:block;
+}
 
+.btn-nav{
+    display:none;
+}
+
+.nav-links{
+    position:absolute;
+    top:90px;
+    left:0;
+    width:100%;
+    background:#111;
+    display:none;
+    flex-direction:column;
+    align-items:center;
+    gap:25px;
+    padding:25px 0;
+}
+
+.nav-links.open{
+    display:flex;
+}
+   
 .hero{
 
 padding:140px 5% 80px;
