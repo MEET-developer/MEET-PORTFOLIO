@@ -229,6 +229,8 @@ max-width:760px;
     justify-content: center;
     align-items: center;
     z-index: 99999;
+
+    transition: opacity .6s ease, visibility .6s ease;
 }
 
 .loader-logo{
