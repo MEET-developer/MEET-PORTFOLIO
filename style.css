@@ -4005,3 +4005,7 @@ overflow:hidden;
 }
 
 }
+
+*{
+    outline:1px solid red;
+}
