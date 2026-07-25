@@ -7,20 +7,26 @@
             LOADER
 ========================================== */
 
-document.addEventListener("DOMContentLoaded", () => {
+function hideLoader() {
     const loader = document.getElementById("loader");
 
     if (!loader) return;
 
-    setTimeout(() => {
-        loader.style.opacity = "0";
-        loader.style.visibility = "hidden";
+    loader.classList.add("loader-hide");
 
-        setTimeout(() => {
-            loader.remove();
-        }, 600);
-    }, 1800);
+    setTimeout(() => {
+        loader.remove();
+    }, 600);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(hideLoader, 1800);
 });
+
+// Backup: if something delays the page, force-hide after 4 seconds.
+window.addEventListener("load", hideLoader);
+
+setTimeout(hideLoader, 4000);
 
 /* ==========================================
             CUSTOM CURSOR
