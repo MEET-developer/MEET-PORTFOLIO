@@ -563,6 +563,11 @@ if (menuBtn && navMenu) {
     });
 
 }
+document.querySelectorAll("*").forEach(el=>{
+if(el.offsetWidth > document.documentElement.clientWidth){
+console.log(el);
+}
+});
 
 /* ==========================================
             RESIZE FIX
