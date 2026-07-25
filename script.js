@@ -7,26 +7,13 @@
             LOADER
 ========================================== */
 
-function hideLoader() {
+document.addEventListener("DOMContentLoaded", () => {
     const loader = document.getElementById("loader");
 
-    if (!loader) return;
-
-    loader.classList.add("loader-hide");
-
     setTimeout(() => {
-        loader.remove();
-    }, 600);
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-    setTimeout(hideLoader, 1800);
+        loader.style.display = "none";
+    }, 2000);
 });
-
-// Backup: if something delays the page, force-hide after 4 seconds.
-window.addEventListener("load", hideLoader);
-
-setTimeout(hideLoader, 4000);
 
 /* ==========================================
             CUSTOM CURSOR
