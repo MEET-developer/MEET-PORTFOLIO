@@ -3656,12 +3656,14 @@ padding:100px 5%;
 }
    
 header{
-    padding: 12px 5%;
+    padding: 10px 16px;
 }
 
 .navbar{
+    width: 100%;
     padding: 12px 18px;
-    border-radius: 20px;
+    border-radius: 18px;
+    box-sizing: border-box;
 }
 
 .logo img{
