@@ -7,23 +7,19 @@
             LOADER
 ========================================== */
 
-window.addEventListener("load", () => {
-
+document.addEventListener("DOMContentLoaded", () => {
     const loader = document.getElementById("loader");
 
     if (!loader) return;
 
     setTimeout(() => {
-
         loader.style.opacity = "0";
         loader.style.visibility = "hidden";
 
         setTimeout(() => {
             loader.remove();
         }, 600);
-
     }, 1800);
-
 });
 
 /* ==========================================
