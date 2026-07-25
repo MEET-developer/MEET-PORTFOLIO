@@ -225,11 +225,21 @@ max-width:760px;
     inset: 0;
     background: #050505;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: 99999;
 
+    opacity: 1;
+    visibility: visible;
+
     transition: opacity .6s ease, visibility .6s ease;
+}
+
+.loader-hide{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }
 
 .loader-logo{
