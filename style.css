@@ -3650,18 +3650,19 @@ padding:100px 5%;
 }
    
 header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
+    width:100%;
+    left:0;
+    top:0;
+    padding:10px;
+    box-sizing:border-box;
 }
 
 .navbar{
-    padding: 12px 18px;
-    border-radius: 18px;
-    box-sizing: border-box;
+    width:100%;
+    padding:12px 18px;
+    border-radius:20px;
+    box-sizing:border-box;
+    overflow:hidden;
 }
 
 .logo img{
