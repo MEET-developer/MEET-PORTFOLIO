@@ -543,6 +543,10 @@ setInterval(() => {
             MOBILE MENU (IF ADDED)
 ========================================== */
 
+/* ==========================================
+   MOBILE MENU
+========================================== */
+
 const menuBtn = document.querySelector(".menu-btn");
 const navMenu = document.querySelector(".nav-links");
 
@@ -550,9 +554,37 @@ if (menuBtn && navMenu) {
 
     menuBtn.addEventListener("click", () => {
 
-        navMenu.classList.toggle("open");
+        const isOpen = navMenu.classList.toggle("open");
 
-        menuBtn.classList.toggle("active");
+        menuBtn.classList.toggle("active", isOpen);
+
+        menuBtn.setAttribute(
+            "aria-expanded",
+            isOpen ? "true" : "false"
+        );
+
+        menuBtn.innerHTML = isOpen
+            ? '<i class="fas fa-xmark"></i>'
+            : '<i class="fas fa-bars"></i>';
+
+    });
+
+    /* Close menu after clicking a link */
+
+    navMenu.querySelectorAll("a").forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            navMenu.classList.remove("open");
+
+            menuBtn.classList.remove("active");
+
+            menuBtn.setAttribute("aria-expanded", "false");
+
+            menuBtn.innerHTML =
+                '<i class="fas fa-bars"></i>';
+
+        });
 
     });
 
