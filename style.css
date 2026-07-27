@@ -217,38 +217,6 @@ max-width:760px;
 }
 
 /* =====================================================
-   LOADER
-===================================================== */
-
-#loader{
-    position: fixed;
-    inset: 0;
-    background: #050505;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 99999;
-}
-
-.loader-logo{
-    font-family: "Sora", sans-serif;
-    font-size: 110px;
-    font-weight: 800;
-    color: var(--primary);
-    letter-spacing: 8px;
-    text-shadow: 0 0 30px rgba(255,140,50,.4);
-}
-
-.loader-text{
-    margin-top: 18px;
-    font-size: 15px;
-    letter-spacing: 4px;
-    color: #cfcfcf;
-    text-transform: uppercase;
-}
-
-/* =====================================================
    BACKGROUND
 ===================================================== */
 
@@ -410,12 +378,27 @@ header{
     transform:scale(1.05);
 }
 
+.menu-btn{
+    display:none;
+    background:none;
+    border:none;
+    color:#fff;
+    font-size:28px;
+    cursor:pointer;
+}
+
 .nav-links{
-
     display:flex;
-
+    align-items:center;
     gap:42px;
+}
 
+.btn-nav{
+    display:inline-flex;
+}
+
+.nav-links.open{
+    transform:translateY(0);
 }
 
 .nav-links a{
@@ -3469,7 +3452,31 @@ grid-template-columns:1fr;
 ===================================================== */
 
 @media (max-width:768px){
+.menu-btn{
+    display:block;
+}
 
+.btn-nav{
+    display:none;
+}
+
+.nav-links{
+    position:absolute;
+    top:90px;
+    left:0;
+    width:100%;
+    background:#111;
+    display:none;
+    flex-direction:column;
+    align-items:center;
+    gap:25px;
+    padding:25px 0;
+}
+
+.nav-links.open{
+    display:flex;
+}
+   
 .hero{
 
 padding:140px 5% 80px;
@@ -3579,35 +3586,48 @@ padding:100px 5%;
                 MOBILE DEVICES
 ===================================================== */
 
-@media (max-width:576px){
+@media (max-width:768px){
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 12px;
+    box-sizing: border-box;
+}
 
 .navbar{
-
-padding:16px 5%;
-
+    width: 100%;
+    max-width: 100%;
+    padding: 12px 16px;
+    border-radius: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
-.logo{
-
-font-size:28px;
-
+.logo img{
+    height: 42px;
+    width: auto;
 }
 
-.nav-links{
-
-display:none;
-
+.menu-btn{
+    display: block;
+    font-size: 22px;
+    flex-shrink: 0;
 }
 
 .btn-nav{
-
-display:none;
-
+    display: none;
+}
 }
 
 .hero{
 
-padding:120px 5% 70px;
+padding:90px 5% 70px;
 
 gap:50px;
 
@@ -3734,7 +3754,7 @@ font-size:14px;
 
 }
 
-}
+
 
 /* =====================================================
                 EXTRA SMALL DEVICES
