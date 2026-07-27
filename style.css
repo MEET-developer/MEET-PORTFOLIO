@@ -217,38 +217,6 @@ max-width:760px;
 }
 
 /* =====================================================
-   LOADER
-===================================================== */
-
-#loader{
-    position: fixed;
-    inset: 0;
-    background: #050505;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 99999;
-}
-
-.loader-logo{
-    font-family: "Sora", sans-serif;
-    font-size: 110px;
-    font-weight: 800;
-    color: var(--primary);
-    letter-spacing: 8px;
-    text-shadow: 0 0 30px rgba(255,140,50,.4);
-}
-
-.loader-text{
-    margin-top: 18px;
-    font-size: 15px;
-    letter-spacing: 4px;
-    color: #cfcfcf;
-    text-transform: uppercase;
-}
-
-/* =====================================================
    BACKGROUND
 ===================================================== */
 
